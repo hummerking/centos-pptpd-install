@@ -1,3 +1,5 @@
+#4test
+
 yum remove -y pptpd ppp
 iptables --flush POSTROUTING --table nat
 iptables --flush FORWARD
