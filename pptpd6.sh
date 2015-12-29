@@ -7,9 +7,10 @@ rm -rf /etc/pptpd.conf
 rm -rf /etc/ppp
 
 arch=`uname -m`
-wget http://poptop.sourceforge.net/yum/stable/packages/pptpd-1.4.0-1.el6.$arch.rpm
 
-yum -y install make libpcap iptables gcc-c++ logrotate tar cpio perl pam tcp_wrappers dkms kernel_ppp_mppe ppp
+yum -y install wget make libpcap iptables gcc-c++ logrotate tar cpio perl pam tcp_wrappers dkms kernel_ppp_mppe ppp
+
+wget http://poptop.sourceforge.net/yum/stable/packages/pptpd-1.4.0-1.el6.$arch.rpm
 rpm -Uvh pptpd-1.4.0-1.el6.$arch.rpm
 
 
